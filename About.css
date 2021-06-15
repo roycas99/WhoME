@@ -1,12 +1,14 @@
 html{
-    font-size: 18px;
+    font-size: 16px;
 }
 body{
     background-color: bisque;
+
 }
 .About h1{
     text-align: center;
     font-weight: 1000;
+    font-size: 2rem;
 
 }
 .About p{
@@ -17,4 +19,33 @@ body{
 .About span{
     text-transform: uppercase;
     font-weight: 600;
+}
+.media {
+    margin-bottom: 20%;
+}
+.media-container{
+    overflow: hidden;
+}
+.media-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+h3 {
+    font-size: 1.2rem;
+}
+
+ ul {
+    display: block;
+    margin: 5px 20px;
+
+}
+/* link unorder paragrah/span settimg started i know*/
+ul p{
+    word-spacing: 1px;
+}
+ul span{
+    font-weight: bolder;
+    color: red;
+    font-style: italic;
 }
