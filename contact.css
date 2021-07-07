@@ -1,0 +1,57 @@
+html {
+    background-color: #fff;
+    font-family: "Rock Salt", cursive;
+}
+
+body {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    line-height: 100px;
+    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    color: khaki;
+    background-color: steelblue;
+}
+.tagline{
+    font-family: "Quicksand",sans-serif;
+    color: lightslategray;
+    line-height: 50px;
+}
+
+.link {
+    display: flex;
+}
+
+.border {
+    border: 1px solid red;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 340px;
+    height: 440px;
+    margin: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    position: relative;
+
+
+}
+/* h2: send me an email*/
+.h2{
+    margin: 10px 0;
+    padding-bottom: 10px;
+    color: #787878;
+    border-bottom:2px solid #78788c ;
+
+}
