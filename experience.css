@@ -6,11 +6,14 @@
 
 
 
-html {
+html,body {
     background-color: #9bf6ff;
     font-family: 'Oswald', sans-serif;
-    width: auto;
+    width: 100%;
+    font-family: "Rock Salt", cursive;
+
 }
+
 
 
 #headerExperience {
@@ -24,14 +27,17 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    margin-bottom: 25px;
 
 }
 .container {
 display: flex;
-height: 100vh;
 flex-direction: column;
 gap:25px;
 align-items: center;
+margin-bottom: 25px;
+
+
 
 }
 .century, .soleiman, .LNA {
@@ -42,13 +48,15 @@ align-items: center;
     display: block;
 
 
+
 }
-.centur,.soleiman,.LNA{
+.century,.soleiman,.LNA{
     display: flex;
-    gap:25px;
     flex-direction: column;
      align-items: center;
      justify-content: center;
+
+
 
 }
 .headers,.tasks {
@@ -57,6 +65,48 @@ align-items: center;
 
 
 
+
+}
+/* nav and ul */
+ul{
+    overflow:hidden;
+    display: inline-block;
+
+
+/* how do I set the vertical spacing between the list items? */
+}
+li{
+    margin: 10px 0;
+ letter-spacing: 2px;
 }
 
 
+/* media and image*/
+.media{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+footer .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+  padding: 5em 0;
+  background-color: orangered;
+  height: 2.5rem;
+ bottom: 0;
+}
+
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+}
