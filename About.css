@@ -94,4 +94,25 @@ footer li {
   display: inline-block;
   padding: 0.75rem 1.25rem;
 }
+/* links and  how their colors will reacted */
 
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:whitesmoke;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}

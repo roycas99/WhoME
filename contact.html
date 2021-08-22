@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>contact</title>
-  <link rel="stylesheet" href="contact.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="icon.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rock+Salt" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
-  <!--Header-->
-  <div id="header">
-    <h1>Contact.</h1>
-    <h2 class="tagline">Contact me any of these:</h2>
-  </div>
+  <body>
+    <!--Header-->
+    <div id="header">
+      <h1>Contact.</h1>
+      <h2 class="tagline">Contact me any of these:</h2>
+    </div>
 
-  <!--container links-->
-  <div class="container">
-    <div class="Links border">
-      <div class="social-icons">
-        <!--1nd-->
-        <a href="" class="social-icon social-icon--github">
+    <!--container links-->
+    <div class="container">
+      <div class="Links border">
+        <div class="social-icons">
+          <!--1nd-->
+          <a href="https://github.com/roycas99" class="social-icon social-icon--github">
             <i class="fa fa-github"></i>
           </a>
           <!--2nd-->
-          <a href="" class="social-icon social-icon--linkedin">
+          <a href="https://www.linkedin.com/in/abshir-mohamed/" class="social-icon social-icon--linkedin">
             <i class="fa fa-linkedin"></i>
           </a>
           <!--3rd-->
-          <a href="" class="social-icon social-icon--instagram">
+          <a href="https://www.instagram.com/abshir_79roycas/" class="social-icon social-icon--instagram">
             <i class="fa fa-instagram"></i>
           </a>
           <!--4th-->
-          <a href="" class="social-icon social-icon--facebook">
+          <a href="https://www.facebook.com/siyuudi.jamamohamed/" class="social-icon social-icon--facebook">
             <i class="fa fa-facebook"></i>
           </a>
-
+        </div>
+        <!--send me an email-->
+      </div>
     </div>
-      <!--send me an email-->
+    <!-- send email part-->
+    <div class="send">
+      <form class="form">
+        <h2 class="h2">send me an email</h2>
+        <label for="Name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="Name"
+          placeholder="Write your name"
+        /><br />
+        <label for="Email">Email:</label><br />
+        <input
+          type="text"
+          id="email"
+          name="Email"
+          placeholder="let me know how to contact you"
+        /><br />
+        <label for="Message">Message:</label><br />
+        <input
+          type="text"
+          id="message"
+          name="Message"
+          placeholder="What would you like to tell me..."
+        />
+        <button>Send email</button>
+      </form>
     </div>
-  </div>
-<!-- send email part-->
-  <div class="send">
-  <form class="form">
-    <h2 class="h2">send me an email</h2>
-    <label for="Name">Name:</label><br />
-    <input type="text" id="name" name="Name" placeholder="Write your name" /><br />
-    <label for="Email">Email:</label><br />
-    <input type="text" id="email" name="Email" placeholder="let me know how to contact you" /><br />
-    <label for="Message">Message:</label><br />
-    <input type="text" id="message" name="Message" placeholder="What would you like to tell me..." />
-    <button>Send email</button>
-  </form>
-  </div>
-  <!--Footer-->
-  <footer class="container">
-    <div class="copyright">&copy; Abshir Team</div>
+    <!--Footer-->
+    <footer class="container">
+      <div class="copyright">&copy; Abshir Team</div>
       <ul>
-        <li>Home</li>
-        <li>Contact</li>
-        <li>Experience</li>
+        <a href="/About.html" target="_blank" rel="noopener noreferrer">
+          <li>About</li>
+        </a>
+        <a href="/contact.html" target="_blank" rel="noopener noreferrer">
+          <li>Contact</li>
+        </a>
+        <a href="/experience.html" target="_blank" rel="noopener noreferrer">
+          <li>Experience</li>
+        </a>
         <li>Achievemants</li>
-        <li>About</li>
       </ul>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
