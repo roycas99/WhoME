@@ -1,5 +1,14 @@
-html{
-    background-color: blanchedalmond;
+html {
+  background-color: #fff;
+  font-family: "Rock Salt", cursive;
+}
+
+body {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  margin: 0;
+  text-align: center;
 }
 .container{
     display: grid;
@@ -18,7 +27,7 @@ html{
     background:#111;
     color:#e63946;
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
-  font-size:48px;
+  font-size:12px;
 
 }
 .education{
@@ -103,4 +112,51 @@ p{
     word-spacing: 1px;
     font-size: large;
     font-family: Helvetica, Arial, sans-serif;
+}
+/* footer*/
+footer {
+  background-color: #aaf683;
+  padding: 0 1rem;
+ font-family: 'Vollkorn', serif;;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black
+  padding: 5em 0;
+
+}
+
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+}
+/* links and  how their colors will reacted */
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:#14213d;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color:blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
 }

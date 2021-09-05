@@ -90,7 +90,7 @@ label {
 }
 
 footer {
-  background-color: orangered;
+  background-color:#faedcd;
   padding: 0 1rem;
 }
 footer .container {
@@ -118,7 +118,7 @@ footer li {
 /* links and  how their colors will reacted */
 
 .foot a:link {
-  color: black;
+  color: #14213d;
   background-color: transparent;
   text-decoration: none;
 }

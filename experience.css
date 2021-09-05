@@ -88,16 +88,19 @@ li{
     display: block;
 }
 /* footer css*/
-
-footer .foot {
+footer {
+  background-color: #aaf683;
+  padding: 0 1rem;
+ font-family: 'Anton', sans-serif;
+ text-align: center;
+}
+footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color:white;
+  color: white;
   padding: 5em 0;
-  background-color: orangered;
-  height: 2.5rem;
- bottom: 0;
+
 }
 
 
@@ -109,6 +112,7 @@ footer ul {
 footer li {
   display: inline-block;
   padding: 0.75rem 1.25rem;
+
 }
 /* links and  how their colors will reacted */
 
@@ -118,7 +122,7 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color:whitesmoke;
+  color:#14213d;
   background-color: transparent;
   text-decoration: none;
 }
