@@ -1,0 +1,106 @@
+html{
+    background-color: blanchedalmond;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    grid-template-areas:
+    "ach ach"
+    "edu li"
+    "res res";
+}
+#header{
+    padding: 16px;
+    grid-area:ach ;
+    text-align: center;
+    background:#111;
+    color:#e63946;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+  font-size:48px;
+
+}
+.education{
+    grid-area: edu;
+    background-color:#90e0ef;
+    text-align: center;
+}
+.Licenses{
+    grid-area: li;
+    text-align: center;
+    background-color: #57C4E5;
+}
+.Researches{
+    grid-area: res;
+    text-align: center;
+    background-color: #caf0f8;
+}
+/*media*/
+.media{
+    width: 100%;
+}
+.media-container img {
+  max-width: 50em;
+  height: auto;
+  display: block;
+}
+
+.media-container {
+  overflow: hidden;
+}
+h2{
+    margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+h3{
+    margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	text-shadow: 0 -1px rgba(0,0,0,0.6);
+	font-size: 28px;
+	line-height: 40px;
+	background: #355681;
+	background: rgba(53,86,129, 0.8);
+	border: 1px solid #fff;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 0 10px 0 10px;
+	box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+	font-family: 'Muli', sans-serif;
+}
+h4{
+    margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+	font-size: 22px;
+	line-height: 40px;
+	color: #355681;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(53,86,129, 0.3);
+}
+/*list*/
+ul {
+  list-style-type: "*";
+}
+ul li {
+  list-style:cross-fade();
+  position: relative;
+  padding: 3px 0 2px 25px;
+}
+/* text*/
+p{
+    color:#e63946;
+    line-height: 1.5;
+    word-spacing: 1px;
+    font-size: large;
+    font-family: Helvetica, Arial, sans-serif;
+}
