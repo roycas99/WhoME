@@ -50,9 +50,13 @@ body {
     width: 100%;
 }
 .media-container img {
-  max-width: 50em;
-  height: auto;
-  display: block;
+
+  display: inline-block;
+  margin-bottom: 0.7rem;
+    width:  826px;
+    height: 628px;
+    object-fit: cover;
+
 }
 
 .media-container {

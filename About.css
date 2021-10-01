@@ -2,116 +2,210 @@ html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background-color: bisque;
   margin: 0;
+  background-color: #fff0f3;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+  display: grid;
+  gap: 25px;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "main main main main"
+    "media media media media "
+    "coder coder fact fact"
+    "story story story story"
+    "foot foot foot foot";
+  padding: 2px;
 }
+
 .main {
-  height: 30rem;
+  grid-area: main;
+  height: 100vh;
   padding-top: 16px;
   background-image: url("/images/pexels-asad-photo-maldives-3293148.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  gap: 25px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    " about about about about";
+  text-align: center;
 }
 
 nav {
-  background-color: orangered;
   color: white;
+  grid-area: nav;
+  font-size: larger;
+  font-weight: bolder;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
 }
+
 nav li {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 15px 20px;
+  border: green 5px solid;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.About {
+  grid-area: about;
+  color: white;
+  padding: 0px 25px;
 }
 
 .About h1 {
+  font-size: 50px;
   text-align: center;
-  font-weight: 1000;
-  font-size: 2rem;
-   /* typing effect*/
-  border-right: 0.1em solid;
-  width: 50ch;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 5s steps(40,end) , cursor-blink .01s step-end infinite alternate;
+  font-weight: 800;
+  font-family: 'Raleway',sans-serif;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
 
-}
-@keyframes typing{
-  from {
-    width: 0;
-  }
-}
-@keyframes cursor-blink{
-  50%{
-    border-color: transparent;
-  }
-}
-/* typing effect end*/
 .About p {
   line-height: 1.4;
   word-spacing: 00.2em;
-  font-family: "Odibee Sans";
+  font-family: 'Raleway',sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 0 24px;
 }
+
 .About span {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 .media {
-  margin-bottom: 20%;
+  width: 100%;
+  grid-area: media;
+  background-color: yellow;
+
+}
+.media::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.img{
+  float: left;
+  padding: 10px;
+
 }
 .media-container {
   overflow: hidden;
 }
+
 .media-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  width: 38rem;
+  height: 40rem;
+  object-fit: cover;
 }
+
+.second main {
+  grid-area: second;
+}
+
 h3 {
   font-size: 1.2rem;
+  color:#fca311;
 }
 
 ul {
   display: block;
   margin: 5px 20px;
 }
+
 /* link unorder paragrah/span settimg started i know*/
 ul p {
   word-spacing: 1px;
 }
+
 ul span {
   font-weight: bolder;
   color: red;
   font-style: italic;
 }
 
-footer {
-  background-color: orangered;
-  padding: 0 1rem;
+.story {
+  grid-area: story;
+  background-color:#1b4332;
+  color: white;
 }
-footer .container {
+p{
+  font-size: 20px;
+  line-height: 40px;
+  text-shadow:
+  0.07em black,
+  0 0.07em black,
+   -0.07em 0 black,
+   0 -0.07em black;
+}
+
+.facts {
+  grid-area: fact;
+  background-color: aqua;
+}
+
+.coder {
+  grid-area: coder;
+  background:black
+
+}
+
+.coder li {
+  font-size: large;
+  text-align: center;
+  color:#fff;
+  padding: 20px;
+  -webkit-animation: coderli 1s ease-in-out infinite alternate;
+  animation: coderli 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes coderli {
+        from {
+          text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
+                       0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+        }
+        to {
+          text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+                       0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+      }
+
+
+
+
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 5em 0;
-}
-footer ul {
-  list-style: none;
-  margin: 0;
+  padding: 10px 20px;
+  background-color: black;
+  grid-area: foot;
 }
 
-footer li {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
+.copyright {
+  text-align: center;
+  color: blue;
+  float: left;
 }
+
 /* links and  how their colors will reacted */
 
 a:link {
@@ -119,16 +213,19 @@ a:link {
   background-color: transparent;
   text-decoration: none;
 }
+
 a:visited {
-  color:whitesmoke;
+  color: whitesmoke;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:hover {
-  color:blue;
+  color: blue;
   background-color: transparent;
   text-decoration: underline;
 }
+
 a:active {
   color: yellow;
   background-color: transparent;
