@@ -1,172 +1,137 @@
-html,
+/* root and variables */
+:root {
+  --primary: #ddd;
+  --light: #fff;
+  --dark: #333;
+  --shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+  --red: red;
+  --blue: blue;
+  --black:black;
+  
+  }
+html{
+  /* box-sizing: border-box;     */
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  margin: 0;
-  background-color: #fff0f3;
+  background: #ccc;
+  margin: 30px 50px;
+  line-height: 1.4;
+  
+}
+figcaption{
+  box-shadow: var(--shadow);
+  background-color: #CAA8F5;
 }
 
 .container {
   display: grid;
-  gap: 25px;
-  grid-template-rows: auto;
-  justify-content: center;
-  grid-template-columns: auto auto auto auto;
-  grid-template-areas:
-    "main main main main"
-    "media media media media "
-    "coder coder fact fact"
-    "story story story story"
-    "foot foot foot foot";
-  padding: 2px;
+  grid-gap: 20px;
 }
-
-.main {
-  grid-area: main;
-  height: 100vh;
-  padding-top: 16px;
-  background-image: url("/images/pexels-asad-photo-maldives-3293148.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  gap: 25px;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "nav nav nav nav"
-    " about about about about";
-  text-align: center;
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  border: 0; 
 }
-
-nav {
-  color: white;
-  grid-area: nav;
-  font-size: larger;
-  font-weight: bolder;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-}
-
-nav li {
-  display: inline-block;
-  padding: 15px 20px;
-  border: green 5px solid;
-  border-radius: 10px;
-  margin-top: 12px;
-}
-
-.About {
-  grid-area: about;
-  color: white;
-  padding: 0px 25px;
-}
-
-.About h1 {
-  font-size: 50px;
-  text-align: center;
-  font-weight: 800;
-  font-family: 'Raleway',sans-serif;
-  line-height: 72px;
-  margin: 0 0 24px;
-  text-transform: uppercase;
-}
-
-.About p {
-  line-height: 1.4;
-  word-spacing: 00.2em;
-  font-family: 'Raleway',sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 32px;
-  margin: 0 0 24px;
-}
-
-.About span {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.media {
-  width: 100%;
-  grid-area: media;
-  background-color: yellow;
-
-}
-.media::after{
-  content: "";
-  clear: both;
-  display: table;
-}
-.img{
-  float: left;
-  padding: 10px;
-
-}
-.media-container {
-  overflow: hidden;
-}
-
-.media-container img {
-  display: inline-block;
-  margin-bottom: 0.7rem;
-  width: 38rem;
-  height: 40rem;
-  object-fit: cover;
-}
-
-.second main {
-  grid-area: second;
-}
-
 h3 {
   font-size: 1.2rem;
   color:#fca311;
+  background-color: var(--blue);
 }
 
-ul {
+img
+{
+  max-width: 100%;
+}
+
+.main-nav ul {
+  display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4,1fr);
+  
+}
+/* nav links */
+.main-nav a
+{
+  background: var(--primary);
   display: block;
-  margin: 5px 20px;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
 }
 
-/* link unorder paragrah/span settimg started i know*/
-ul p {
-  word-spacing: 1px;
+/* hovering nav links */
+.main-nav a:hover {
+  background: var(--blue);
+  color: var(--light);
 }
 
-ul span {
-  font-weight: bolder;
-  color: red;
-  font-style: italic;
+/* about me or top container */
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+  'showcase showcase showcase showcase' ;
 }
 
-.story {
-  grid-area: story;
-  background-color:#1b4332;
-  color: white;
-}
-p{
-  font-size: 20px;
-  line-height: 40px;
-  text-shadow:
-  0.07em black,
-  0 0.07em black,
-   -0.07em 0 black,
-   0 -0.07em black;
+/* All about showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(images/pexels-asad-photo-maldives-3293148.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.6rem;
+
 }
 
-.facts {
-  grid-area: fact;
-  background-color: aqua;
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0.3rem;
 }
 
+/* boxes */
+.career {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.6rem;
+}
+.car {
+background: var(--primary);
+text-align: center;
+padding: 1.5rem 2rem;
+box-shadow: var(--shadow);
+}
+/* coder  customization only */
 .coder {
-  grid-area: coder;
-  background:black
-
+  background-color: var(--black);
 }
+
 
 .coder li {
   font-size: large;
@@ -187,47 +152,119 @@ p{
         }
       }
 
-
-
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  padding: 10px 20px;
-  background-color: black;
-  grid-area: foot;
+/* coder customization only end */
+/* facts customization */
+.facts {
+  background-color: aqua;
 }
+/* fact customization end */
 
-.copyright {
+/* info */
+.info {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(1,1fr);
+  padding: 3rem;
+  background-color:#1b4332; 
+  color: #fff;
+  margin-top: 1.6rem;
+}
+.info p {
+  font-size: 20px;
+  line-height: 40px;
+  text-shadow:
+  0.07em black,
+  0 0.07em black,
+   -0.07em 0 black,
+   0 -0.07em black;
+}
+.info h3 {
   text-align: center;
-  color: blue;
-  float: left;
 }
 
-/* links and  how their colors will reacted */
-
-a:link {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
+/* portfolia */
+.media {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns:1fr 1fr;
 }
 
-a:visited {
-  color: whitesmoke;
-  background-color: transparent;
-  text-decoration: none;
+.media img{
+  width: 100%;
+  box-shadow: var(--shadow);
 }
 
-a:hover {
-  color: blue;
-  background-color: transparent;
-  text-decoration: underline;
+/* Footer */
+footer {
+  margin-top: 1.6rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
 }
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+/* Media Queries */
+
+@media(max-width: 700px){
+  .top-container{
+      grid-template-areas: "showcase showcase";
+  }
+
+  .showcase h1 {
+      font-size: 2.5rem;
+      color: yellow;
+     
+  }
+  .showcase p {
+   
+    box-shadow: var(--shadow);
+    padding: 0.5rem 0.3rem;
+  }
+  
+  .main-nav ul {
+      grid-template-columns: 1fr;
+  }
+  .career{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .info{
+    grid-template-columns: 1fr;  
+  }
+  .info .btn {
+      display: block;
+      text-align: center;
+      margin: auto;
+  }
+  .media{
+      grid-template-columns: 1fr 1fr;
+     
+  }
+  .media img{
+      width: 100%;
+  }
+
+  /* end of media */
+}
+
+@media(max-width: 500px){
+  .top-container {
+      grid-template-areas: 
+      'showcase'
+  }
+  .showcase h1 {
+    font-size: 1.5rem;
+    color: var(--red);
+}
+  .career{
+      grid-template-columns: 1fr;
+  }
+  .media{
+      grid-template-columns: 1fr;
+  }
+  .media img{
+      width: 100%;
+      
+  }
 }
