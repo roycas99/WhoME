@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary: #ddd;
+  --light: #fff;
+  --dark: #333;
+  --shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+  --red: red;
+  --blue: blue;
+  --black:black;
+  
+  }
 
 html,
 body {
@@ -10,100 +20,165 @@ body {
   font-family: "Oswald", sans-serif;
   width: 100%;
   font-family: "Rock Salt", cursive;
+  box-sizing: border-box;
 }
 
-#headerExperience {
-  line-height: 200px;
-  font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  color: khaki;
-  background-color: steelblue;
-  background-image: url("images/Experience\ background\ imagee.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin-bottom: 25px;
-  height: 100VH;
+img
+{
+  max-width: 100%;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 25px;
-  align-items: center;
-  margin-bottom: 25px;
+}
+.top{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2,1fr);
+  
+
+}
+.tasks{
+  line-height: 2rem;
+  padding: 5% 10%;
+  text-align: center;
+  text-shadow: var(--shadow);
+  
+ 
+}
+.tasks ul {
+  list-style-type: none;
+  
+}
+.tasks li {
+  margin: 5% 0;
+  
+}
+
+.tasks h5 {
+  background-color: #ffff00;
+  text-transform: uppercase;
 }
 
 .century,
 .soleiman,
 .LNA {
+ 
+  font-size: 16px;
+  background-color: #e5ece9;
+  box-shadow: var(--shadow);
+  
+  
+  
+}
+.experience
+{
+  grid-template-columns: repeat(4,1fr);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border: 1px solid yellow;
+  background: var(--primary);
+  box-shadow: var(--shadow);
+
+}
+.century{
+  grid-template: 1fr;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60rem;
-  height: auto;
-  border: 3px solid black;
-  font-size: 16px;
-  background-color: #e5ece9;
+  flex-basis: content;
+  
+}
+.soleiman{
+  grid-template-columns: 1fr;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-basis: content;
 }
+.LNA{
+ grid-column: 1/3;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: content;
 
-.headers,
+}
+.main-nav ul {
+  display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4,1fr);
+  
+}
+/* nav links */
+.main-nav a
+{
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+/* hovering nav links */
+.main-nav a:hover {
+  background: blue;
+  color: white;
+}
+footer{
+  /* grid-area: "ft"; */
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 1.6rem;
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* .headers,
 .tasks {
   display: block;
   align-content: space-around;
-}
+} */
 
 /* nav and ul */
-ul {
+/* ul {
   overflow: hidden;
   display: inline-block;
 
-  /* how do I set the vertical spacing between the list items? */
+  how do I set the vertical spacing between the list items?
 }
 
-li {
+/* li {
   letter-spacing: 2px;
 }
 
 /* media and image*/
-.media {
+/* .media {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */ 
 
-/* footer css*/
-footer {
-  background-color: #aaf683;
-  padding: 0 1rem;
-  font-family: "Anton", sans-serif;
-  text-align: center;
-}
 
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  padding: 5em 0;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-}
-
-footer li {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-}
 
 /* links and  how their colors will reacted */
 
-a:link {
+/* a:link {
   color: black;
   background-color: transparent;
   text-decoration: none;
@@ -113,9 +188,9 @@ a:visited {
   color: #14213d;
   background-color: transparent;
   text-decoration: none;
-}
+} */
 
-a:hover {
+/* a:hover {
   color: blue;
   background-color: transparent;
   text-decoration: none;
@@ -125,4 +200,71 @@ a:active {
   color: yellow;
   background-color: transparent;
   text-decoration: none;
+/* } */ 
+
+/* lets make it responsive web */
+@media(max-width: 700px){
+  .container {
+    display: grid;
+    gap: 25px;
+  }
+  .experience
+{
+  grid-template-columns: repeat(1,1fr);
+  background-color: red;
+}
+
+  .top{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .LNA{
+   grid-column: 1/3;
+    background-color: plum;
+  }
+  
+
+  .main-nav ul {
+    grid-template-columns: repeat(1,1fr);
+}
+img {
+  width: 100%;;
+}
+}
+
+@media(max-width: 400px){
+  .container {
+    display: grid;
+    gap: 25px;
+  }
+  .experience
+{
+  grid-template-columns: repeat(1,1fr);
+  background-color:pink;
+}
+
+  .top{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+  .century{
+    grid-template-columns: 1fr;
+  
+  }
+
+  .LNA{
+    grid-column: 1/2;
+    background-color: rosybrown;
+  }
+  
+
+  .main-nav ul {
+    grid-template-columns: repeat(1,1fr);
+}
+img {
+  width: 100%;;
+}
+
 }
