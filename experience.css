@@ -21,6 +21,9 @@ body {
   width: 100%;
   font-family: "Rock Salt", cursive;
   box-sizing: border-box;
+  margin-right: 1rem;
+  padding: 1em;
+  
 }
 
 img
