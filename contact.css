@@ -11,6 +11,69 @@ body {
   text-align: center;
 }
 
+/* grid for small screen */
+@media screen and (max-width :400px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "header"
+    "container"
+    "send"
+    "footer";
+    grid-gap: 1em;
+
+    padding: 1em;
+  }
+  #header{
+    grid-area: header;
+    background-color: red;
+  }
+  .container {
+   grid-area: container;
+  background-color: green;
+  
+ 
+    
+  }
+/* container grid items */
+
+
+
+  .send{
+    grid-area: send;
+    background-color: hotpink;
+    display: grid;
+    grid-template-areas: "h2" "form" "button";
+    grid-gap: 25px;
+    padding: 1em;
+  }
+  /* send grid items */
+  .h2{
+    grid-area: h2;
+    background-color: honeydew;
+    margin-left: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .lbl{
+    grid-area: form;
+    background-color: greenyellow;
+  }
+  .btn {
+    grid-area: button;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: lawngreen;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+  }
+  
+}
+
 
 h1 {
   margin: 0;
@@ -18,7 +81,6 @@ h1 {
   font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   color: khaki;
-  background-color: steelblue;
 }
 .tagline {
   font-family: "Quicksand", sans-serif;
@@ -31,7 +93,7 @@ h1 {
 }
 /* this only related on links*/
 .border {
-  border: 1px solid red;
+  border: 1px solid greenyellow;
   background-color: palevioletred;
   display: flex;
   justify-content: center;
@@ -65,7 +127,7 @@ input {
   transition: all 0.3s; /* i dont know what this do yet.*/
   border-bottom: 2px solid #bebed2;
 }
-button {
+/* button {
   float: right;
   padding: 8px 12px;
   margin: 8px 0 0;
@@ -75,7 +137,7 @@ button {
   color: #5a5a6e;
   cursor: pointer;
   transition: all 0.3s;
-}
+} */
 button:hover {
   background: red;
   color: #fff;

@@ -21,7 +21,6 @@
     <!--Header-->
     <div id="header">
       <h1>Contact</h1>
-      <h2 class="tagline">Contact me any of these:</h2>
     </div>
 
     <!--container links-->
@@ -29,21 +28,29 @@
       <div class="Links border">
         <div class="social-icons">
           <!--1nd-->
-          <a href="https://github.com/roycas99" class="social-icon social-icon--github">
-            <i class="fa fa-github"></i>
-          </a>
+          <div class="git">
+            <a href="https://github.com/roycas99" class="social-icon social-icon--github" >
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
           <!--2nd-->
-          <a href="https://www.linkedin.com/in/abshir-mohamed/" class="social-icon social-icon--linkedin">
-            <i class="fa fa-linkedin"></i>
-          </a>
+          <div class="ln">
+            <a href="https://www.linkedin.com/in/abshir-mohamed/" class="social-icon social-icon--linkedin" >
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </div>
           <!--3rd-->
-          <a href="https://www.instagram.com/abshir_79roycas/" class="social-icon social-icon--instagram">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <!--4th-->
-          <a href="https://www.facebook.com/siyuudi.jamamohamed/" class="social-icon social-icon--facebook">
-            <i class="fa fa-facebook"></i>
-          </a>
+          <div class="ig">
+            <a href="https://www.instagram.com/abshir_79roycas/" class="social-icon social-icon--instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+          <div class="fc">
+            <!--4th-->
+            <a href="https://www.facebook.com/siyuudi.jamamohamed/" class="social-icon social-icon--facebook" >
+              <i class="fa fa-facebook"></i>
+            </a>
+          </div>
         </div>
         <!--send me an email-->
       </div>
@@ -52,32 +59,34 @@
     <div class="send">
       <form class="form">
         <h2 class="h2">send me an email</h2>
-        <label for="Name">Name:</label><br />
-        <input
-          type="text"
-          id="name"
-          name="Name"
-          placeholder="Write your name"
-        /><br />
-        <label for="Email">Email:</label><br />
-        <input
-          type="text"
-          id="email"
-          name="Email"
-          placeholder="let me know how to contact you"
-        /><br />
-        <label for="Message">Message:</label><br />
-        <input
-          type="text"
-          id="message"
-          name="Message"
-          placeholder="What would you like to tell me..."
-        />
-        <button>Send email</button>
+        <div class="lbl">
+          <label for="Name">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            placeholder="Write your name"
+          /><br />
+          <label for="Email">Email:</label><br />
+          <input
+            type="text"
+            id="email"
+            name="Email"
+            placeholder="let me know how to contact you"
+          /><br />
+          <label for="Message">Message:</label><br />
+          <input
+            type="text"
+            id="message"
+            name="Message"
+            placeholder="What would you like to tell me..."
+          />
+        </div>
+        <button class="btn">Send email</button>
       </form>
     </div>
     <!--Footer-->
-    <footer class="container">
+    <footer >
       <ul>
         <a href="/About.html" target="_blank" rel="noopener noreferrer">
           <li>About</li>

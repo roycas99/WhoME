@@ -123,11 +123,12 @@ footer {
   padding: 0 1rem;
  font-family: 'Vollkorn', serif;;
 }
+
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black
+  color: black;
   padding: 5em 0;
 
 }
