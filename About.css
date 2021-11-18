@@ -28,6 +28,7 @@ figcaption{
 .container {
   display: grid;
   grid-gap: 20px;
+  padding: 1em;
 }
 .btn {
   background: var(--dark);
