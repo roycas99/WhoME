@@ -2,13 +2,24 @@ html {
   background-color: #fff;
   font-family: "Rock Salt", cursive;
 }
+:root {
+  --primary: #ddd;
+  --light: #fff;
+  --dark: #333;
+  --shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+  --red: red;
+  --blue: blue;
+  --black:black;
+  
+  }
 
 body {
-  display: block;
-  width: 100%;
+  max-width: 50em;
+	margin: 10px;
+  padding: 10px;
   background-color: transparent;
-  margin: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 
@@ -26,25 +37,26 @@ h1 {
   line-height: 50px;
 }
 
-.link {
+/* .link {
   display: flex;
-}
+  justify-content: center;
+
+} */
 /* this only related on links*/
 .border {
   border: 1px solid red;
   background-color: palevioletred;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  
 }
 .form {
-  width: 340px;
-  height: 440px;
+  /* width: 340px;
+  height: 440px; */
   margin: auto;
   padding: 20px 30px;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  position: relative;
+  /* position: relative; */
 }
 /* h2: send me an email*/
 .h2 {
@@ -62,13 +74,14 @@ input {
   resize: none; /* idk*/
   border: 0;
   font-family: "Montserrat", sans-serif;
-  transition: all 0.3s; /* i dont know what this do yet.*/
+  /* transition: all 0.3s; i dont know what this do yet. */
   border-bottom: 2px solid #bebed2;
+  overflow: hidden;
 }
 button {
   float: right;
-  padding: 8px 12px;
-  margin: 8px 0 0;
+  /* padding: 8px 12px;  */
+   margin: 8px 0 0; 
   font-family: "Montserrat", sans-serif;
   border: 2px solid #78788c;
   background: 0;
@@ -89,51 +102,107 @@ label {
 
 }
 
-footer {
-  background-color:#faedcd;
-  padding: 0 1rem;
-}
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  padding: 5em 0;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-}
-
-footer li {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
+.con {
+	padding: 2em;
+	background: hsl(0, 0%, 10%);
+	color: white;
+	text-align: center;
+  margin-top: 20px;
 }
 
 
 .copyright{
   display: inline;
 }
-/* links and  how their colors will reacted */
 
-.foot a:link {
-  color: #14213d;
+  .con a:visited {
+  color:red;
   background-color: transparent;
   text-decoration: none;
-}
- .foot a:visited {
-  color:whitesmoke;
-  background-color: transparent;
-  text-decoration: none;
-}
-.foot a:hover {
+} */
+.con a:hover {
   color:blue;
   background-color: transparent;
   text-decoration: none;
 }
-.foot a:active {
+.con a:active {
   color: yellow;
   background-color: transparent;
   text-decoration: none;
+} 
+
+.main-nav a
+{
+
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
+ /* responsive */
+ 
+ @supports (grid-area: auto) {
+
+  /* only borders */
+  @media screen and (min-width: 28em) {
+    .border {
+      border: 1px solid red;
+      background-color: palevioletred;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: 50em) {
+    body {
+      grid-template-columns: 30em minmax(auto, 30em) 15em;
+      justify-content: center;
+      background-color: transparent;
+      margin: 0;
+    max-width: none;
+    }
+    .link {
+      display: flex;
+    }
+    .border {
+      border: 1px solid red;
+      background-color: palevioletred;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form {
+      width: 340px;
+      height: 440px;
+      margin: auto;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+    }
+    button{
+      padding: 8px 12px;
+    }
+    .con {
+      grid-column: 1/4;
+      grid-row: 6;
+      
+      
+    }
+     .main-nav ul  {
+      grid-template-columns: repeat(4,1fr);
+      display: grid;
+    
+     
+     }
+
+  }
+
+
+ }
