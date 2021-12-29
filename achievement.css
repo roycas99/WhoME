@@ -123,75 +123,12 @@ figure {
 	text-align: center;
   margin: 10px;
 }
-<<<<<<< HEAD
-h4{
-    margin: 1em 0 0.5em 0;
-	font-weight: 600;
-	font-family: 'Titillium Web', sans-serif;
-	position: relative;
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
-	font-size: 22px;
-	line-height: 40px;
-	color: #355681;
-	text-transform: uppercase;
-	border-bottom: 1px solid rgba(53,86,129, 0.3);
-}
-/*list*/
-ul {
-  list-style-type: "*";
-}
-ul li {
-  list-style:cross-fade();
-  position: relative;
-  padding: 3px 0 2px 25px;
-}
-/* text*/
-p{
-    color:#e63946;
-    line-height: 1.5;
-    word-spacing: 1px;
-    font-size: large;
-    font-family: Helvetica, Arial, sans-serif;
-}
-/* footer*/
-footer {
-  background-color: #aaf683;
-  padding: 0 1rem;
- font-family: 'Vollkorn', serif;;
-}
-
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  padding: 5em 0;
-
-}
-
-
-footer ul {
-  list-style: none;
-  margin: 0;
-}
-
-footer li {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-}
-/* links and  how their colors will reacted */
-
-a:link {
-  color: black;
-  background-color: transparent;
-=======
-
 /* nav links */
 .main-nav a
 {
 
   display: block;
->>>>>>> 853cade1d1117e60c59856a4071006fb7539704c
+
   text-decoration: none;
   padding: 0.8rem;
   text-align: center;
