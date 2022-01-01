@@ -123,12 +123,12 @@ figure {
 	text-align: center;
   margin: 10px;
 }
-
 /* nav links */
 .main-nav a
 {
 
   display: block;
+
   text-decoration: none;
   padding: 0.8rem;
   text-align: center;
